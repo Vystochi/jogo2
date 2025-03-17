@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo 2D</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .background {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(fundo.jpg);
+            background-size: cover;
+            background-position: center;
+            filter: blur(2px);
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.2); 
+            backdrop-filter: blur(6px);
+            z-index: 1;
+        }
+       
+        canvas {
+            background-image: url(Imagem.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            border : 13px solid rgba(31, 159, 182, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="container">
+<canvas id="jogo2D" width="1000" height="500"></canvas>
+<script src="script.js"></script>   
+</body>
+</html>
